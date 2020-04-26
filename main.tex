@@ -1,0 +1,158 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+\usepackage{float}
+\usepackage{lastpage}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{listings} 
+\usepackage[]{mcode}
+\usepackage{watermark}
+\usepackage{blindtext}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{footnote}
+\usepackage{multirow}
+%\makesavenoteenv{table}
+\usepackage[bottom]{footmisc}
+\usepackage{mathpazo}
+\usepackage{subfig}
+\usepackage{mathtools}
+\usepackage{animate}
+\usepackage[justification=centering]{caption}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{url}
+\usepackage{breakurl}
+\usepackage[breaklinks]{hyperref}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Howdy}
+\rhead{42490 TEMO}
+
+
+\linespread{1.5} % Line spacing
+
+% \setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
+
+\graphicspath{{./Pictures/}} % Specifies the directory where pictures are stored
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=30mm,
+ right=30mm,
+ top=20mm,
+ bottom=20mm
+ }
+ 
+\begin{document}
+
+%\renewcommand{\headrulewidth}{0.4pt} %header
+
+
+\cfoot{\thepage\ of \pageref{LastPage}}
+%-------------------------------------------------------------------------------
+%	TITLE PAGE
+%-------------------------------------------------------------------------------
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+
+\includegraphics[width=0.1\textwidth]{DTU-logo.pdf}
+\quad \quad \quad \quad 
+\includegraphics[width=0.3\textwidth]{Logo_NoSubtitle_BlueGrey.png}
+\\[0.5cm]
+
+
+
+
+\textsc{\large 42490 Technology, management, organisation and Business models}\\[0.5cm] % Minor heading such as course title
+
+%\textsc{\large \bfseries Tennis Major Tournament Match Statistics}\\[0.5cm]
+
+\HRule \\[0.8cm]
+{ \huge \bfseries HOWDY - WorklifeBarometer\\[0.4cm] % Title of your document
+\HRule \\[1cm]
+
+\begin{minipage}{0.5\textwidth}
+\begin{center} \small
+\emph{Team - "No group name"}\\
+\emph{TAs - Kasper \& Lars}
+\begin{table}[H]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Student number}} & \multicolumn{1}{c|}{\textbf{Responsible for}} \\ \hline
+s144211 & 1.2, 1.3 \\ \hline
+ Kazi & 2.2 \\ \hline
+s193100 & 1.1 \\ \hline
+ &  \\ \hline
+ &  \\ \hline
+ &  \\ \hline
+\end{tabular}%
+}
+\end{table}
+\end{center}
+\end{minipage}\\[4cm]
+
+\thiswatermark{\centering \put(-180,-720){\includegraphics[scale=0.55]{DTU-frise-SH-15.pdf}} }
+}
+
+
+% Signatures, we might have to remove the name part and just keep the student nr
+% I am unsure of this since the pp is contradicting itself 
+\begin{tabular}{cc}
+ $\overline{\qquad\text{s153986}\qquad}$ \quad& \quad
+ $\overline{\qquad\text{s144211}\qquad}$ \\ [1cm]
+ $\overline{\qquad\text{s154328}\qquad}$ \quad& \quad
+ $\overline{\qquad\text{s193100}\qquad}$ \\[1cm]
+  $\overline{\qquad\text{(s number)}\qquad}$ \quad& \quad
+ $\overline{\qquad\text{(s number)}\qquad}$ \\
+\end{tabular}\\[1cm]
+
+{\small
+\today %dato 
+}
+\\[0.2cm] % Date, change the \today to a set date if you want to be precise
+
+
+
+\end{titlepage}
+
+\newpage
+\tableofcontents
+
+\newpage
+\section{PART I : Present situation - MARCO}
+\input{sections/part_1_situation.tex}
+
+\newpage
+\section{PART II : Retrospective analysis}
+\input{sections/part_2_retro_analysis.tex}
+
+\newpage
+\section{PART III : Prospective analysis}
+\input{sections/part_3_pro_analysis.tex}
+
+\newpage
+\section{PART IV : Conclusions \& recommendations}
+\input{sections/part_4_conclusions.tex}
+
+
+% BIBLIOGRAPHY
+\newpage
+\bibliographystyle{plain}
+\bibliography{bibliography.bib}
+%%%%%%%%%%%% Rapport %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
+
